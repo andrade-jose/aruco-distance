@@ -156,8 +156,17 @@
             A distância será calculada automaticamente.
         </div>
     </div>
+    
+    <script async src="https://docs.opencv.org/4.7.0/opencv.js"></script>
+    <script async src="https://docs.opencv.org/4.7.0/opencv-aruco.js"></script>
 
-    <script src="https://docs.opencv.org/4.5.2/opencv.js"></script>
+    <script>
+        Module = {
+            onRuntimeInitialized() {
+            onOpenCvReady();
+            }
+        }
+    </script>
     <script>
         // Configurações
         const MARKER_SIZE_CM = 7.5; // Tamanho real do marcador em cm (75mm)
